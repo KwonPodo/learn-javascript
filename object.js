@@ -58,7 +58,7 @@ function Person(name, age) { // 순수하게 object만을 생성하는 함수는
 const person5 = new Person('kay', 46);
 console.log(person5);
 
-// 5. in operator: propert existence check (key in obj)
+// 5. in operator: property existence check (key in obj)
 console.log('name' in jay);
 console.log('age' in jay);
 console.log('hasJob' in jay);

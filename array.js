@@ -86,8 +86,3 @@ console.log(fruits.indexOf('lemon'));
 console.log(fruits.lastIndexOf('lemon'));
 
 console.clear();
-const numbers = [1, 2, 3, 4, 5, 6, 7];
-numbers.forEach((num, index, array) => {
-    array[index] += 1;
-    console.log(`${array}, ${index}, ${num}`);
-});
