@@ -27,7 +27,7 @@ const rabbit = {
     },
 };
 
-json = JSON.stringify(rabbit, ['name', 'color', 'size']);
+json = JSON.stringify(rabbit, ['name', 'color']);
 console.log(json);
 
 json = JSON.stringify(rabbit, (key, value) => {
@@ -39,10 +39,21 @@ console.log(json);
 // 2. JSON to Object
 // parse(json)
 console.clear();
+console.log(rabbit);
 json = JSON.stringify(rabbit);
+console.log(json);
 const obj = JSON.parse(json);
 console.log(obj);
+const obj2 = JSON.parse(json, (key, value) => {
+    console.log(`key: ${key}, value: ${value}`);
+    return key === 'birthDate' ? new Date(value) : value;
+    // return value;
+});
+console.log(obj2);
+
+
 rabbit.jump();
 // obj.jump() =>  object rabbit -> JSON -> object obj  (object -> JSON 과정에서 메소드는 포함되지 않음)
 
-//rabbit.birthDate.getDate();
+console.log(rabbit.birthDate.getDate());
+console.log(obj2.birthDate.getDate());
