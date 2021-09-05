@@ -1,25 +1,27 @@
 // Callback Hell example
 class UserStorage {
-    loginUser = (id, password) => 
-        new Promise((resolve, reject) => {
+    loginUser(id, password) {
+        return new Promise((resolve, reject) => {
             if (
-                (id === 'jay' && password === 'ludin') ||
-                (id === 'kwon' && password === 'family')
-            ) {
-                resolve(id);
-            } else {
-                reject(new Error('Not Found'));
-            }
-    })
+                (id === 'jay' && password === 'kwon') ||
+                (id === 'ludin' && password === '9901')) {
+                    resolve('jay');
+                } else {
+                    reject('Not Found');
+                }
+        })
+    }
+        
     
-    getRoles = (user) =>
-        new Promise((resolve, reject) => {
+    getRoles(user) {
+        return new Promise((resolve, reject) => {
             if (user === 'jay') {
                 resolve({name: 'jay', role: 'admin'});
             } else {
                 reject(new Error('no access'));
             }
     })
+    }
 }
 
 const userStorage = new UserStorage();
