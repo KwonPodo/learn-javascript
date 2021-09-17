@@ -1,6 +1,3 @@
-// Don't give up
-// 포기하지 마세요
-
 // 함수의 이유: 반복의 회피, 반복되는 작업의 재사용을 통한 효율적인 코드짜기.
 
 // 함수 선언
@@ -19,7 +16,7 @@ function add(a, b) {
 // 함수 호출
 doSomething();
 
-const result = add(1,2);
+const result = add(1, 2);
 
 // 함수 인자로 전달
 function functionParam(add) {
