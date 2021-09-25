@@ -34,3 +34,30 @@ functionParam(add); // 함수를 전달할 때는 함수의 이름만을 명시�
 const addFun = add;
 console.log(addFun);
 addFun(1, 2);
+
+console.clear();
+
+// Factory Function
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log("draw");
+    },
+  };
+}
+
+const myCircle = createCircle(1);
+
+// Constructor Function
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = () => {
+    console.log("draw");
+  };
+}
+
+const circle = new Circle();
+// new -> 1. Creates an empty object
+//        2. Set this to point the empty object
+//        3. Return the object from the Constructor Function
