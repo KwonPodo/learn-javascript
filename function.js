@@ -152,6 +152,9 @@ const simpleMultiply = (a, b) => {
   console.log("IIFE");
 })();
 
+// Switch statement: When i have many options to choose from.
+// In a Switch statement, case values are tested with strict equality(===).
+
 // Quiz
 // function calculate(command, a, b)
 // command: add, subtract, divide, multiply, remainder
