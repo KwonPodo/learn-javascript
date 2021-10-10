@@ -28,6 +28,9 @@ console.log(jay["name"]); // 정확하게 어떤 key가 필요할 지 모를 때
 jay["hasJob"] = false; // 뒤늦게 객체의 속성 추가
 console.log(jay.hasJob);
 
+// Testing Objects for Properties
+jay.hasOwnProperty("name"); // returns boolean.
+
 function printValue(obj, key) {
   //console.log(obj.key); -> object에 key라는 property가 있는가?
   console.log(obj[key]);
